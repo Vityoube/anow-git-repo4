@@ -1,0 +1,66 @@
+{
+  "owner": "i",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "whoami"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "RESUME",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_READY",
+      "processingCommand": {
+        "actionTargetType": "CRITERIA",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "resultMax": 1,
+        "resultMin": 1
+      }
+    },
+    {
+      "processingActionType": "RESUME",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_READY",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING"
+      }
+    }
+  ],
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "stock.MCA-DEMO.demo1",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "stock.MCA-DEMO.demo1",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    },
+    {
+      "dependencyType": "RESOURCE",
+      "name": "stock.object_folder.1",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "stock.object_folder.1",
+      "resourcePermits": "2",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ]
+}
