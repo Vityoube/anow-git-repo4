@@ -1,0 +1,29 @@
+{
+  "node": "linux_1",
+  "owner": "i",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "whoami"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "stock.MCA-DEMO.demo1",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "stock.MCA-DEMO.demo1",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ]
+}
