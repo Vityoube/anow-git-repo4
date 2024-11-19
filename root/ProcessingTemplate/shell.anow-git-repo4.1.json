@@ -10,7 +10,7 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "whoami"
+    "script": "whoami; whoareyou"
   },
   "dependencies": 
   [
